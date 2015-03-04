@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>question1</key>
+	<array>
+		<string>How did you feel about the amount of therapy (number and duration of sessions) you received this week?</string>
+		<string>Too little</string>
+		<string>Almost enough</string>
+		<string>About right</string>
+		<string>A little more than desirable</string>
+		<string>Too much</string>
+	</array>
+	<key>question10</key>
+	<array>
+		<string>Overall, how were you feeling this week?</string>
+		<string>Very unwell</string>
+		<string>Somewhat worse than usual</string>
+		<string>About the same as usual</string>
+		<string>Somewhat better than usual</string>
+		<string>Much better than usual</string>
+		<string>Follow up if overall wellness was worsened: Do you know why?</string>
+	</array>
+	<key>question11</key>
+	<array>
+		<string>In comparison to when you began this session, how much energy do you have, or how tired do you feel, following a session’s completion?</string>
+		<string>Extremely tired</string>
+		<string>Somewhat tired</string>
+		<string>With about the same energy</string>
+		<string>Somewhat less tired</string>
+		<string>Energized</string>
+	</array>
+	<key>question12</key>
+	<array>
+		<string>Which of the following best describes your overall mood following a session’s completion compared to when you begin a session?</string>
+		<string>Much worsened</string>
+		<string>Somewhat worsened</string>
+		<string>About the same</string>
+		<string>Somewhat improved</string>
+		<string>Much improved</string>
+		<string>Follow up if overall mood worsened: Do you know why?</string>
+	</array>
+	<key>question2</key>
+	<array>
+		<string>How much did you like using the system this week?
+
+</string>
+		<string>Not at all</string>
+		<string>Somewhat disliked it</string>
+		<string>Neither liked nor disliked it</string>
+		<string>Somewhat liked it</string>
+		<string>Like it very much</string>
+	</array>
+	<key>question3</key>
+	<array>
+		<string>Overall, how easy or difficult was it to understand how to use the system? For example, following directions on how to setup targets and complete the task, not necessarily how challenging the task itself felt.</string>
+		<string>Very difficult</string>
+		<string>Somewhat difficult</string>
+		<string>Neither easy nor difficult</string>
+		<string>Somewhat easy</string>
+		<string>Very easy</string>
+		<string>Follow up if any difficulty was indicated: Which part(s) did you find difficult?</string>
+	</array>
+	<key>question4</key>
+	<array>
+		<string>Overall, how challenging was it to perform the training tasks you were asked to complete?</string>
+		<string>Much too challenging</string>
+		<string>Somewhat too challenging</string>
+		<string>Right amount of challenge</string>
+		<string>Challenging, but not enough</string>
+		<string>Never challenging</string>
+		<string>Follow up if too much challenge was indicated: Which part(s) did you find too challenging?</string>
+	</array>
+	<key>question5</key>
+	<array>
+		<string>How easy or difficult was it to understand your performance using the visual feedback that you saw?</string>
+		<string>Very difficult</string>
+		<string>Somewhat difficult</string>
+		<string>Neither easy nor difficult</string>
+		<string>Somewhat easy </string>
+		<string>Very easy</string>
+		<string>Follow up if any difficulty was indicated: Which part(s) did you find difficult to understand?</string>
+	</array>
+	<key>question6</key>
+	<array>
+		<string>How easy or difficult was it to understand your performance using the sound feedback that you heard?</string>
+		<string>Very difficult</string>
+		<string>Somewhat difficult</string>
+		<string>Neither easy nor difficult</string>
+		<string>Somewhat easy </string>
+		<string>Very easy</string>
+		<string>Follow up if any difficulty was indicated: Which part(s) did you find difficult to understand?</string>
+	</array>
+	<key>question7</key>
+	<array>
+		<string>How much did you like the visual feedback that you saw?</string>
+		<string>Not at all</string>
+		<string>Somewhat disliked</string>
+		<string>Neither liked nor disliked</string>
+		<string>Somewhat liked</string>
+		<string>Very much liked</string>
+		<string>Follow up if dislike was indicated: Which part(s) did you dislike most?</string>
+	</array>
+	<key>question8</key>
+	<array>
+		<string>How much did you like the sound feedback that you heard?</string>
+		<string>Not at all</string>
+		<string>Somewhat disliked</string>
+		<string>Neither liked nor disliked</string>
+		<string>Somewhat liked</string>
+		<string>Very much liked</string>
+		<string>Follow up if dislike was indicated: Which part(s) did you dislike most?</string>
+	</array>
+	<key>question9</key>
+	<array>
+		<string>How much did you use your affected arm in daily activity outside of training this week?</string>
+		<string>Not at all</string>
+		<string>Somewhat less than usual</string>
+		<string>About the same as usual</string>
+		<string>Somewhat more than usual</string>
+		<string>Much more than usual</string>
+	</array>
+	<key>question13</key>
+	<array>
+		<string>Overall, how do you think you’ve been doing in this week’s training?</string>
+	</array>
+</dict>
+</plist>

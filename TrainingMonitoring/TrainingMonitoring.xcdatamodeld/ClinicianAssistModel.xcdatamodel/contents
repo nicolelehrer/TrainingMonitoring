@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="11G63" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Rating" representedClassName="Rating" syncable="YES">
+        <attribute name="compensationScore" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="manipulationScore" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="overallScoreFinal" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="overallScoreInitial" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="ratingOrderIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="releaseScore" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="scoreChangeAnnotation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trajectoryScore" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <attribute name="transportScore" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <relationship name="trial" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Trial" inverseName="rating" inverseEntity="Trial" syncable="YES"/>
+    </entity>
+    <entity name="Session" representedClassName="Session" syncable="YES">
+        <attribute name="finishedStory" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="sessionDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sessionID" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <attribute name="sharedStory" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="studySessionID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="subject" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Subject" inverseName="sessions" inverseEntity="Subject" syncable="YES"/>
+        <relationship name="surveyAnswer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SurveyAnswer" inverseName="session" inverseEntity="SurveyAnswer" syncable="YES"/>
+        <relationship name="taskType" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TaskType" inverseName="session" inverseEntity="TaskType" syncable="YES"/>
+    </entity>
+    <entity name="StorySession" representedClassName="StorySession" syncable="YES">
+        <attribute name="sessionID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="storySet" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="StorySet" inverseName="storySessions" inverseEntity="StorySet" syncable="YES"/>
+        <relationship name="trials" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Trial" inverseName="storySession" inverseEntity="Trial" syncable="YES"/>
+    </entity>
+    <entity name="StorySet" representedClassName="StorySet" syncable="YES">
+        <attribute name="currentSessionID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="readyToEdit" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="subjectID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="storySessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StorySession" inverseName="storySet" inverseEntity="StorySession" syncable="YES"/>
+    </entity>
+    <entity name="Subject" representedClassName="Subject" syncable="YES">
+        <attribute name="studySubjectID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="subjectID" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="subject" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <entity name="SurveyAnswer" representedClassName="SurveyAnswer" syncable="YES">
+        <attribute name="answerValue" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <attribute name="followUp" optional="YES" attributeType="String" defaultValueString="Type annotation text here" syncable="YES"/>
+        <attribute name="questionIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="session" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="surveyAnswer" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <entity name="TaskType" representedClassName="TaskType" syncable="YES">
+        <attribute name="descriptor" optional="YES" attributeType="String" defaultValueString="taskType" syncable="YES"/>
+        <attribute name="movieURLString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numTrials" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <relationship name="session" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="taskType" inverseEntity="Session" syncable="YES"/>
+        <relationship name="trials" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Trial" inverseName="taskType" inverseEntity="Trial" syncable="YES"/>
+    </entity>
+    <entity name="Trial" representedClassName="Trial" syncable="YES">
+        <attribute name="coarseSliderStartTime" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="coarseStartTime" optional="YES" attributeType="Float" defaultValueString="-1" syncable="YES"/>
+        <attribute name="coarseStopTime" optional="YES" attributeType="Float" defaultValueString="-1" syncable="YES"/>
+        <attribute name="fineSliderEndTime" optional="YES" attributeType="Float" defaultValueString="1" syncable="YES"/>
+        <attribute name="fineSliderStartTime" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="fineStartTime" optional="YES" attributeType="Float" defaultValueString="-1" syncable="YES"/>
+        <attribute name="fineStopTime" optional="YES" attributeType="Float" defaultValueString="-1" syncable="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <attribute name="showFull" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="storyIndex" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <attribute name="tag" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <attribute name="tagAnnotation" optional="YES" attributeType="String" defaultValueString="Type notes here" syncable="YES"/>
+        <relationship name="rating" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Rating" inverseName="trial" inverseEntity="Rating" syncable="YES"/>
+        <relationship name="storySession" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="StorySession" inverseName="trials" inverseEntity="StorySession" syncable="YES"/>
+        <relationship name="taskType" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TaskType" inverseName="trials" inverseEntity="TaskType" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Rating" positionX="88" positionY="108" width="128" height="195"/>
+        <element name="Session" positionX="-164" positionY="-477" width="128" height="165"/>
+        <element name="StorySession" positionX="-468" positionY="-9" width="128" height="90"/>
+        <element name="StorySet" positionX="-630" positionY="-180" width="128" height="105"/>
+        <element name="Subject" positionX="72" positionY="-468" width="128" height="90"/>
+        <element name="SurveyAnswer" positionX="81" positionY="-168" width="128" height="105"/>
+        <element name="TaskType" positionX="-263" positionY="-162" width="128" height="135"/>
+        <element name="Trial" positionX="-99" positionY="27" width="128" height="270"/>
+    </elements>
+</model>
